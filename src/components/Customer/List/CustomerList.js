@@ -62,6 +62,8 @@ function CustomerList(props) {
         })
     }
 
+    // deletar
+
     return (
         <Container>
             {
