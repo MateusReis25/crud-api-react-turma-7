@@ -99,17 +99,20 @@ function CustomerList(props) {
                             value={task.age}
                             onChange={event => setTask({...task, age: event.target.value})} 
                         />
-                         <Form.Control type="text" placeholder="Digite a novo data de nascimento do usuario"
-                            value={task.age}
-                            onChange={event => setTask({...task, age: event.target.value})} 
+                        <Form.Label>CPF:</Form.Label>
+                         <Form.Control type="text" placeholder="Digite o CPF atualizado do usuario"
+                            value={task.document}
+                            onChange={event => setTask({...task, document: event.target.value})} 
                         />
-                         <Form.Control type="text" placeholder="Digite a novo data de nascimento do usuario"
-                            value={task.age}
-                            onChange={event => setTask({...task, age: event.target.value})} 
+                        <Form.Label>Telefone:</Form.Label>
+                         <Form.Control type="text" placeholder="Digite a novo telefone do usuario"
+                            value={task.tel}
+                            onChange={event => setTask({...task, tel: event.target.value})} 
                         />
-                         <Form.Control type="text" placeholder="Digite a novo data de nascimento do usuario"
-                            value={task.age}
-                            onChange={event => setTask({...task, age: event.target.value})} 
+                        <Form.Label>Estado:</Form.Label>
+                         <Form.Control type="text" placeholder="Digite o novo estado do usuario"
+                            value={task.state}
+                            onChange={event => setTask({...task, state: event.target.value})} 
                         />
 
 
@@ -132,9 +135,9 @@ function CustomerList(props) {
             {/* //modal delete */}
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Apagar Tarefa</Modal.Title>
+                    <Modal.Title>Apagar Usuario</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Deseja apagar a tarefa: <strong>{task.description}</strong></Modal.Body>
+                <Modal.Body>Deseja apagar o Usuario: <strong>{task.name}</strong></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
                         Close
